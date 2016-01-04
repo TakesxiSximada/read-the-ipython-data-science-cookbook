@@ -102,9 +102,7 @@ pygments_style = 'sphinx'
 # keep_warnings = False
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = True
-if os.environ.get('READ-THE-IPYTHON-DATA-SCIENCE-COOKBOOK-DISABLE-TODO', None) is not None:
-    todo_include_todos = False
+todo_include_todos = not os.environ.get('READ_THE_IPYTHON_DATA_SCIENCE_COOKBOOK_DISABLE_TODO', None)
 
 # -- Options for HTML output ----------------------------------------------
 # The theme to use for HTML and HTML Help pages.  See the documentation for
