@@ -12,7 +12,7 @@
 #
 # All configuration values have a default; values that are commented out
 # serve to show the default.
-
+import os
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -102,7 +102,8 @@ pygments_style = 'sphinx'
 # keep_warnings = False
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = True
+todo_include_todos = not os.environ.get(
+    'READ-THE-IPYTHON-DATA-SCIENCE-COOKBOOK-DISABLE-TODO', False)
 
 
 # -- Options for HTML output ----------------------------------------------
